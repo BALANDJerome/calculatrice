@@ -30,7 +30,7 @@ inputs.forEach((input) => {
     } else if (e.target.value.match(/[+-/|x]/)) {
       number1 = parseFloat(number1);
       display.innerText = e.target.value;
-      if (indicator.length > 0) {
+      if (indicator.length > 0 && number1) {
         if (indicator == "+") {
           number2 = add(number2, number1);
         } else if (indicator == "-") {
@@ -67,5 +67,6 @@ inputs.forEach((input) => {
       number2 = "";
       indicator = "";
     }
+    console.log(number1, indicator, number2);
   });
 });
